@@ -1,0 +1,46 @@
+laravel version 10.x phải dùng trên nền php version 8.1 trở lên
+
+1. cài hyper -> hỗ trợ gõ cmd
+https://hyper.is/
+
+2. set enviroment variable -> path system C:\xampp\php
+
+3. cài composer -> vender php
+https://getcomposer.org/download/
+ko click develop mode -> next -> next -> next
+
+4. create lavarel
+cd tới desktop
+chạy lệnh theo Your First Laravel Project trên trang https://laravel.com/docs/10.x/installation
+composer create-project laravel/laravel example-app
+
+php chạy trên linux
+apache -> dịch code thành html 
+localhost -> domain pointer ip (trỏ tới), ip trỏ tới server -> trả về trang web
+
+start-> php artisan serve
+make controller -> php artisan make:controller ControllerName
+make model -> php artisan make:model Model name
+xóa vendor, chạy lại thì chạy composer install
+
+tạo database -> utf8mb4_unicode_ci
+tạo bảng hocsinh -> 4 field -> id, name, age, phone
+
+# ***LAVAREL STRUCTURE***
+router: routes/web.php
+controller: app/Http/Controllers/AbcController.php (HocSinhController)
+model: app/Models/Abc.php (HocSinh.php)
+view: resources/views/abc/index.blade.php (hocsinh.blade.php)
+config database: .env
+asset (css/js/image): public/abc/img.jpg
+
+check route list -> php artisan route:list
+tham khảo https://laravel.com/docs/10.x/routing để biết thêm về route
+
+tạo file request -> php artisan make:request Admin/User/StoreRequest
+tạo file StoreRequest để validation
+
+php artisan make:migration create_tênbảng_table -> tạo bảng
+php artisan migrate -> chạy lệnh tạo database mới (laravel)
+php artisan migrate:refresh -> reload lại database sau khi thay đổi
+php artisan config:clear -> xóa bộ nhớ đệm
